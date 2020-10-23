@@ -41,7 +41,14 @@ std::complex<double> jpacPhoto::baryon_resonance::photo_coupling(int lam_i)
 {
   // A_1/2 or A_3/2 depending on ratio R_photo
   double a;
-  (std::abs(lam_i) == 1) ? (a = R_photo) : (a = sqrt(1. - R_photo * R_photo));
+  if (J == 1) 
+  {
+    a = 1.;
+  }
+  else
+  {
+    (std::abs(lam_i) == 1) ? (a = R_photo) : (a = sqrt(1. - R_photo * R_photo));
+  }
 
   // Electromagnetic decay width given by VMD assumption
   std::complex<double> emGamma = (xBR * gamRes) * pow(fJpsi / mJpsi, 2.);

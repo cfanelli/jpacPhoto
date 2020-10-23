@@ -52,6 +52,14 @@ namespace jpacPhoto
 
       switch (J)
       {
+        case 1:
+        {
+          if (P == +1)
+            {l_min = 0; P_t = 2./3.;}
+          else if (P == -1)
+            {l_min = 1; P_t = 3./5.;}
+          break;
+        }
         case 3:
         {
           if (P == -1)

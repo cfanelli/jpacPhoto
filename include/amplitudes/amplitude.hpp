@@ -39,7 +39,7 @@ namespace jpacPhoto
     {};
 
     // Constructor with an amplitude id and number of parameters specified
-    amplitude(reaction_kinematics * xkinem, std::string id, int N)
+    amplitude(reaction_kinematics * xkinem, std::string id, int N = 0)
     : kinematics(xkinem), identifier(id), Nparams(N)
     {};
 
